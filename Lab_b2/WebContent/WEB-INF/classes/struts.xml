@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+<constant name="struts.i18n.encoding" value="utf-8"/>
+   <package name="lzqlab2" extends="struts-default">
+     
+      <action name="query" class="lzqlab2.lab_2" method="execute">
+            <result name="success">/author.jsp</result>
+            <result name="error">/inexist.jsp</result>
+      </action>
+      <action name="detail" class = "lzqlab2.lab_2" method="search">
+			<result>/information.jsp</result>
+		</action>
+		<action name="home">
+			<result>/index.jsp</result>
+		</action>
+		<action name="delete" class = "lzqlab2.lab_2" method="delete">
+			<result>/delete.jsp</result>
+		</action>
+		<action name="toupdate" class = "lzqlab2.lab_2" method="toupdate">
+			<result>/update.jsp</result>
+		</action>
+		<action name="update" class = "lzqlab2.lab_2" method="update">
+			<result>/successup.jsp</result>
+		</action>
+   </package>
+</struts>
